@@ -7,20 +7,37 @@ import { Category } from "./Category";
 export class Product {
     @PrimaryGeneratedColumn()
     id: number;
+
+    @Column()
+    @IsNotEmpty()
+    codBarra: string;
+
     @Column()
     @IsNotEmpty()
     name: string;
+
     @Column()
-    description: string;
+    marca: string;
+
+    @Column() 
+    stock: number;
+
+    @Column()
+    venta: number;
+
     @Column()
     price: number;
    
+    @Column()
     @CreateDateColumn()
     created_at: Date;
+
+    @Column()
     @UpdateDateColumn()
     updated_at: Date;
 
     @ManyToMany(()=>Category,(category)=>category.id)
+    @IsNotEmpty()//esto es para que no se pueda guardar un producto sin categoria
     @JoinTable()
     categories:Category[];
 }

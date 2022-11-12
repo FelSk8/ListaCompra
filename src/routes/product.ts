@@ -7,6 +7,7 @@ const router = Router();
 router.post('/',ProductContoller.new);
 router.get('/',ProductContoller.getAll);
 router.get('/:id',ProductContoller.getById);
-router.patch('/:id',ProductContoller.update);
 router.delete('/:id',ProductContoller.delete);
+router.patch('/:id',ProductContoller.update);
+
 export default router;

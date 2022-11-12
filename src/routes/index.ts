@@ -3,6 +3,7 @@ import user from "./user";
 import auth from "./auth";
 import category from "./category";
 import product from "./product";
+import "reflect-metadata";
 
 
 const routes=Router();

@@ -7,14 +7,17 @@ import { Product } from "./Porduct";
 export class Category {
     @PrimaryGeneratedColumn()
     id: number;
+
     @Column()
     @IsNotEmpty()
     name: string;
-    @Column()
-    description: string;
 
+ 
+    @Column()
     @CreateDateColumn()
     created_at: Date;
+
+    @Column()
     @UpdateDateColumn()
     updated_at: Date;
 

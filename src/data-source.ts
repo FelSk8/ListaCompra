@@ -2,7 +2,6 @@ import "reflect-metadata"
 import { DataSource } from "typeorm"
 import { Category } from "./entity/Category"
 import { Product } from "./entity/Porduct"
-
 import { User } from "./entity/User"
 
 export const AppDataSource = new DataSource({
